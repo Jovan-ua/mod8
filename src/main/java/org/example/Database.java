@@ -21,15 +21,15 @@ public class Database {
         connection = DriverManager.getConnection(DB_URL, DB_UserName, DB_Password);
     }
     public void execute(String str) throws SQLException {
-        Statement statement = connection.createStatement();
-        statement.executeUpdate(str);
+        PreparedStatement statement = connection.prepareStatement(str);
+        statement.executeUpdate();
+
 
     }
     public ResultSet executeRS(String str) throws SQLException {
-        Statement statement = connection.createStatement();
-        ResultSet resultSet = statement.executeQuery(str);
+        PreparedStatement statement = connection.prepareStatement(str);
 
-        return resultSet;
+        return statement.executeQuery();
     }
 
 }
