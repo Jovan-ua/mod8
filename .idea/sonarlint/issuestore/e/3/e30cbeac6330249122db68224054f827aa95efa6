@@ -1,9 +1,9 @@
 
 g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8”Ë›£2
 q
-java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(«ÿæâüÿÿÿÿ8¢Ë›£2
-q
 java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(«ÿæâüÿÿÿÿ8¡Ë›£2
+q
+java:S2095"OUse try-with-resources or close this "PreparedStatement" in a "finally" clause.(«ÿæâüÿÿÿÿ8¢Ë›£2
 v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(ó¾ÓÙ8£Ë›£2
 v	java:S115	"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(—’´8¤Ë›£2
 ‰

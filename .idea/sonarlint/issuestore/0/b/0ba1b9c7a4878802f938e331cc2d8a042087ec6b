@@ -1,0 +1,7 @@
+
+‰
+java:S1130	"lRemove the declaration of thrown exception 'java.io.IOException', as it cannot be thrown from method's body.(œû¿Ø8¿˜¥2
+]	java:S125"<This block of commented-out lines of code should be removed.(‹òŠùùÿÿÿÿ8¾¬¥2
+X	java:S125"<This block of commented-out lines of code should be removed.(–¢8Á˜¥2
+M
+java:S1128"+Remove this unused import 'java.util.List'.(Õë±Äøÿÿÿÿ8Â˜¥2
