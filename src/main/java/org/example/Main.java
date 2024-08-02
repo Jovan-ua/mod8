@@ -8,13 +8,15 @@ import java.sql.SQLException;
 import java.util.List;
 
 public class Main {
-    public static void main(String[] args) throws IOException, SQLException {
+    public static void main(String[] args) throws Exception {
         Flyway flyway = Flyway.configure().dataSource("jdbc:h2:~/test", "sa", "").load();
-  //      flyway.baseline();
         flyway.migrate();
         ClientService cs = new ClientService(DriverManager.getConnection("jdbc:h2:~/test", "sa", ""));
        // cs.create("Petro");
-        cs.getById(3);
+       // cs.getById(3);
+       // cs.setName(5, "Ivan");
+        //cs.delete(6);
+        cs.listAll();
 //        DatabaseQueryService queryService = new DatabaseQueryService();
 //        List<LongestProject> longestProjects = queryService.findLongestProject();
 //        for (LongestProject element : longestProjects) {
