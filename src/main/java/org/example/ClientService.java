@@ -24,7 +24,7 @@ public class ClientService {
 
     public long create(String name) throws Exception {
         createSt.setString(1, name);
-        if (name.length() < 2 || name.length()>20){
+        if (name.length() < 2 || name.length() > 20) {
             throw new Exception("Wrong name value");
         }
         createSt.executeUpdate();
@@ -39,7 +39,7 @@ public class ClientService {
 
     public String getById(long id) throws Exception {
         readSt.setLong(1, id);
-        if (id == 0){
+        if (id == 0) {
             throw new Exception("Wrong id value");
         }
         ResultSet rs = readSt.executeQuery();
@@ -51,29 +51,32 @@ public class ClientService {
         }
         return result;
     }
+
     public void setName(long id, String name) throws Exception {
-        editSt.setString(1,name);
-        editSt.setLong(2,id);
-        if (name.length() < 2 || name.length()>20){
+        editSt.setString(1, name);
+        editSt.setLong(2, id);
+        if (name.length() < 2 || name.length() > 20) {
             throw new Exception("Wrong name value");
         }
-        if (id == 0){
+        if (id == 0) {
             throw new Exception("Wrong id value");
         }
         editSt.executeUpdate();
 
     }
+
     public void delete(long id) throws Exception {
         deleteSt.setLong(1, id);
-        if (id == 0){
+        if (id == 0) {
             throw new Exception("Wrong id value");
         }
         deleteSt.executeUpdate();
     }
+
     public List<Client> listAll() throws SQLException {
         List<Client> clients = new ArrayList<>();
         ResultSet rs = allSt.executeQuery();
-        while (rs.next()){
+        while (rs.next()) {
             long id = rs.getLong("id");
             String name = rs.getString("name");
             clients.add(new Client(id, name));
